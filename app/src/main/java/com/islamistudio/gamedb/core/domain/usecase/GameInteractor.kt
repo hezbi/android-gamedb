@@ -5,7 +5,7 @@ import com.islamistudio.gamedb.core.domain.repository.IGameRepository
 
 class GameInteractor(private val gameRepository: IGameRepository): GameUseCase {
 
-    override fun getAllGame() = gameRepository.getAllGame()
+    override fun getAllGame(reload: Boolean) = gameRepository.getAllGame(reload)
 
     override fun getFavoriteGame() = gameRepository.getFavoriteGame()
 

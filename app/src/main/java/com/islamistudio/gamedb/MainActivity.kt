@@ -1,6 +1,7 @@
 package com.islamistudio.gamedb
 
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
@@ -20,7 +21,11 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        setSupportActionBar(binding.toolbar)
+        supportActionBar?.title = getString(R.string.app_name)
+
         setupBottomNavigationBar()
+
     }
 
     override fun onSupportNavigateUp(): Boolean {
@@ -42,6 +47,18 @@ class MainActivity : AppCompatActivity() {
         binding.apply {
             navBottom.setupWithNavController(navController)
         }
+    }
+
+    fun hideNavBar(state: Boolean) {
+        if (state) binding.navBottom.visibility = View.GONE else binding.navBottom.visibility = View.VISIBLE
+    }
+
+    fun showProgressView() {
+        binding.progressView.show(R.string.please_wait)
+    }
+
+    fun hideProgressView() {
+        binding.progressView.hide()
     }
 
 }

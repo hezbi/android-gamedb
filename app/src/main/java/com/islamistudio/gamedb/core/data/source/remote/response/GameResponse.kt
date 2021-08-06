@@ -13,31 +13,15 @@ data class GameResponse(
     @field:SerializedName("name")
     val name: String,
 
-    @field:SerializedName("description")
-    val description: String,
-
     @field:SerializedName("metacritic")
     val metacritic: Int,
 
     @field:SerializedName("released")
     val released: String,
 
-    @field:SerializedName("backgroundImage")
+    @field:SerializedName("background_image")
     val backgroundImage: String,
 
-    @field:SerializedName("backgroundImageAdditional")
-    val backgroundImageAdditional: String,
-
     @field:SerializedName("rating")
-    val rating: Number,
-
-    @field:SerializedName("platforms")
-    val platforms: List<Platform>,
-
-    @field:SerializedName("developers")
-    val developers: List<Developer>,
-
-    @field:SerializedName("publishers")
-    val publishers: List<Publisher>,
-
+    val rating: Double
 )

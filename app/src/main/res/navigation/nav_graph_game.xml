@@ -9,7 +9,7 @@
         android:id="@+id/navHomeFragment"
         android:name="com.islamistudio.gamedb.home.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" >
+        tools:layout="@layout/fragment_home">
         <action
             android:id="@+id/action_homeFragment_to_searchFragment"
             app:destination="@id/navSearchFragment" />
@@ -27,7 +27,7 @@
         android:id="@+id/navFavoriteFragment"
         android:name="com.islamistudio.gamedb.favorite.FavoriteFragment"
         android:label="fragment_favorite"
-        tools:layout="@layout/fragment_favorite" >
+        tools:layout="@layout/fragment_favorite">
         <action
             android:id="@+id/action_favoriteFragment_to_homeFragment"
             app:destination="@id/navHomeFragment" />
@@ -39,7 +39,7 @@
         android:id="@+id/navSearchFragment"
         android:name="com.islamistudio.gamedb.search.SearchFragment"
         android:label="fragment_search"
-        tools:layout="@layout/fragment_search" >
+        tools:layout="@layout/fragment_search">
         <action
             android:id="@+id/action_searchFragment_to_homeFragment"
             app:destination="@id/navHomeFragment" />
@@ -51,7 +51,7 @@
         android:id="@+id/navSettingFragment"
         android:name="com.islamistudio.gamedb.setting.SettingFragment"
         android:label="fragment_setting"
-        tools:layout="@layout/fragment_setting" >
+        tools:layout="@layout/fragment_setting">
         <action
             android:id="@+id/action_settingFragment_to_homeFragment"
             app:destination="@id/navHomeFragment" />
@@ -60,7 +60,10 @@
         android:id="@+id/navDetailGameFragment"
         android:name="com.islamistudio.gamedb.detail.DetailGameFragment"
         android:label="fragment_detail_game"
-        tools:layout="@layout/fragment_detail_game" >
+        tools:layout="@layout/fragment_detail_game">
+        <argument
+            android:name="game"
+            app:argType="com.islamistudio.gamedb.core.domain.model.Game" />
         <action
             android:id="@+id/action_detailGameFragment_to_homeFragment"
             app:destination="@id/navHomeFragment" />

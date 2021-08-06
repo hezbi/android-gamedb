@@ -17,15 +17,10 @@ object DataMapper {
             GameEntity(
                 id = it.id,
                 name = it.name,
-                description = it.description,
                 metacritic = it.metacritic,
                 released = it.released,
                 backgroundImage = it.backgroundImage,
-                backgroundImageAdditional = it.backgroundImageAdditional,
                 rating = it.rating,
-                platforms = mapPlatformsDomainToEntities(it.platforms),
-                developers = mapDevelopersDomainToEntities(it.developers),
-                publishers = mapPublishersDomainToEntities(it.publishers),
                 isFavorite = false
             )
         }
@@ -73,15 +68,10 @@ object DataMapper {
             Game(
                 id = it.id,
                 name = it.name,
-                description = it.description,
                 metacritic = it.metacritic,
                 released = it.released,
                 backgroundImage = it.backgroundImage,
-                backgroundImageAdditional = it.backgroundImageAdditional,
                 rating = it.rating,
-                platforms = mapPlatformEntitiesToDomain(it.platforms),
-                developers = mapDeveloperEntitiesToDomain(it.developers),
-                publishers = mapPublisherEntitiesToDomain(it.publishers),
                 isFavorite = it.isFavorite
             )
         }
@@ -115,15 +105,10 @@ object DataMapper {
     fun mapGameDomainToEntity(input: Game) = GameEntity(
         id = input.id,
         name = input.name,
-        description = input.description,
         metacritic = input.metacritic,
         released = input.released,
         backgroundImage = input.backgroundImage,
-        backgroundImageAdditional = input.backgroundImageAdditional,
         rating = input.rating,
-        platforms = mapPlatformsDomainToEntities(input.platforms),
-        developers = mapDevelopersDomainToEntities(input.developers),
-        publishers = mapPublishersDomainToEntities(input.publishers),
         isFavorite = input.isFavorite
     )
 

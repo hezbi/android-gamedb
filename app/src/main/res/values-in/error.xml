@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="error_title">Terjadi Gangguan</string>
+    <string name="error_subtitle">Maaf sedang ada kendala pada sistem kami. Mohon coba lagi lain waktu.</string>
+</resources>

@@ -18,7 +18,7 @@ class GameRepository(
     private val appExecutors: AppExecutors
 ): IGameRepository {
 
-    override fun getAllGame(): Flow<Resource<List<Game>>> =
+    override fun getAllGame(reload: Boolean): Flow<Resource<List<Game>>> =
         object : NetworkBoundResource<List<Game>, List<GameResponse>>() {
             override fun loadFromDB(): Flow<List<Game>> {
                 return localDataSource.getAllGame().map {
@@ -36,6 +36,8 @@ class GameRepository(
                 val gameList = DataMapper.mapGameResponsesToEntities(data)
                 localDataSource.insertGame(gameList)
             }
+
+            override fun shouldReload() = reload
 
         }.asFlow()
 
